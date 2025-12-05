@@ -1,0 +1,143 @@
+:root {
+    --primary-font: 'Inter', sans-serif;
+
+    --font-size: 16px;
+    --font-head-size: 18px;
+    /* Цвета */
+    --primary-color: #20264C; /* Основной текст */
+    --secondary-color: #515674; /* Второстепенный текст */
+
+    /* Размеры */
+    --max-width: 1216px; /* Максимальная ширина контейнера */
+    --padding: 24px; /* Отступы */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--padding);
+}
+
+.reviews__container {
+    text-align: center;
+}
+
+.reviews__cards-content {
+    text-align: left;
+
+}
+
+.reviews__links {
+    text-align: left;
+    margin-top: 24px;
+}
+
+.reviews__links_colored {
+    color: #FF941A;
+}
+
+.reviews {
+    padding: 40px 0;
+}
+
+.reviews__title {
+    font-family: var(--primary-font);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.reviews__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.reviews__cards-item {
+    flex: 1 1 300px; /* Резиновая верстка: минимальная ширина 300px */
+    background-color: #FFF;
+    padding: var(--padding);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px 0px rgba(106, 99, 118, 0.20);
+    text-align: left;
+    transition: transform 0.7s ease;
+}
+
+.reviews__cards-item:hover {
+    transform: translate(5px, -10px);
+    background-color: #f0f0f0;
+}
+
+.reviews__author {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__avatar {
+    display: inline-block;
+    border-radius: 8px;
+    width: 59px;
+    height: 59px;
+    margin-right: 10px;
+}
+
+.reviews__role {
+    color: var(--secondary-color);
+}
+
+.reviews__text {
+    margin-bottom: 24px;
+}
+
+.reviews__content {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .reviews__cards {
+        flex-wrap: nowrap;
+        flex-direction: column; /* Смена ориентации на колонку для мобильных устройств */
+        gap: 20px;
+    }
+
+    .reviews__title {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .reviews__cards-item {
+        flex: 0 1 auto;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .reviews__title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+}
