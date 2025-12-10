@@ -1,0 +1,101 @@
+@import url("../../reset.css");
+body {
+  background-color: #787878;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+  width: 470px;
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 40px 26px 40px;
+}
+
+.modal__icon {
+  width: 44px;
+  height: 44px;
+}
+
+.modal__title {
+  font-weight: 600;
+  color: #282828;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.modal__description {
+  color: #5F6980;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.modal__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.modal__button {
+  width: 187px;
+  height: 52px;
+  border-radius: 6px;
+  border: 2px solid #5F6980;
+  background-color: white;
+  cursor: pointer;
+}
+
+.modal__button:hover {
+  background-color: #A6A6A8;
+}
+
+.modal__button:focus {
+  outline: 2px solid #FD7E14;
+  outline-offset: 1px;
+}
+
+.modal__button--proceed {
+  background-color: #FD7E14;
+  color: white;
+  border-color: transparent;
+}
+
+.modal__button--proceed:hover {
+  background-color: chocolate;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 343px;
+    padding: 32px 24px;
+  }
+  .modal__button {
+    width: 139.5px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/*# sourceMappingURL=modal.css.map */

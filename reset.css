@@ -1,0 +1,48 @@
+/* reset.css */
+
+/* 1. Убираем отступы */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Убираем стили списков */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 3. Убираем подчеркивания ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 4. Выравнивание картинок */
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. Наследование шрифтов */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 6. Гладкое скроллирование */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 7. Базовые стили для body */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}

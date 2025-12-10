@@ -1,0 +1,131 @@
+@import url('../../reset.css');
+
+// --- Переменные ---
+$font-family: 'Inter', sans-serif;
+$regular: 400;
+$semi-bold: 600;
+
+$color-body: #787878;
+
+$modal-width-mobile: 343px;
+$modal-width-web: 470px;
+$color-text: #5F6980;
+$color-text-dark: #282828;
+
+$border-radius-s: 6px;
+$border-radius-m: 12px;
+
+//button
+$button-width-desktop: 187px;
+$button-width-mobile: 139.5px;
+
+$button-height: 52px;
+$border-color: #5F6980;
+$color-accent: #FD7E14;
+
+// --- Миксины ---
+@mixin flex($align: stretch, $justify: flex-start, $dir: row, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+  gap: $gap;
+}
+
+
+// --- Стили ---
+body {
+  background-color: $color-body;
+  font-family: $font-family;
+  font-weight: $regular;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  border-radius: $border-radius-m;
+  transform: translate(-50%, -50%);
+  width: $modal-width-web;
+  animation: fadeIn 0.3s ease-in-out;
+
+  @include flex(center, center, column, 16px);
+  padding: 32px 40px 26px 40px;
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__title {
+    font-weight: $semi-bold;
+    color: $color-text-dark;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__description {
+    color: $color-text;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  &__actions {
+    @include flex($align: center, $gap: 16px);
+  }
+
+  &__button {
+    width: $button-width-desktop;
+    height: $button-height;
+    border-radius: $border-radius-s;
+    border: 2px solid $border-color;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #A6A6A8;
+    }
+
+    &:focus {
+      outline: 2px solid #FD7E14;
+      outline-offset: 1px;
+    }
+
+    &--proceed {
+      background-color: $color-accent;
+      color: white;
+      border-color: transparent;
+
+      &:hover {
+        background-color: chocolate;
+      }
+    }
+  }
+
+
+  // --- Адаптив ---
+
+  @media (max-width: 768px) {
+    width: $modal-width-mobile;
+    padding: 32px 24px;
+
+    &__button {
+      width: $button-width-mobile;
+    }
+  }
+}
+
+// --- Анимация ---
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

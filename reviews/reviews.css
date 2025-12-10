@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 :root {
-     /* Шрифт */
     --primary-font: 'Inter', sans-serif;
+
     --font-size: 16px;
     --font-head-size: 18px;
-    
     /* Цвета */
-    --primary-color: #20264C;
-    --secondary-color: #515674;
+    --primary-color: #20264C; /* Основной текст */
+    --secondary-color: #515674; /* Второстепенный текст */
 
     /* Размеры */
-    --max-width: 1216px;
-    --padding: 24px;
+    --max-width: 1216px; /* Максимальная ширина контейнера */
+    --padding: 24px; /* Отступы */
 }
 
 *,
@@ -22,32 +20,32 @@
     box-sizing: border-box;
 }
 
-=======
->>>>>>> dffe1e7 (added modal window and header)
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    color: #333;
-    background-color: #E5E5E5;
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: #fff;
 }
 
-li {
-    margin: 50px 0;
+.container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--padding);
 }
 
-
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    border: 1px solid black;
-    padding: 20px;
-    background-color: aquamarine;
+.reviews {
+    padding: 40px 0;
 }
 
+.reviews__container {
+    text-align: center;
+}
 
-<<<<<<< HEAD
+.reviews__cards-content {
+    text-align: left;
+
 }
 
 .reviews__links {
@@ -59,9 +57,6 @@ nav a {
     color: #FF941A;
 }
 
-.reviews {
-    padding: 40px 0;
-}
 
 .reviews__title {
     font-family: var(--primary-font);
@@ -82,7 +77,7 @@ nav a {
 }
 
 .reviews__cards-item {
-    flex: 1 1 300px;
+    flex: 1 1 300px; /* Резиновая верстка: минимальная ширина 300px */
     background-color: #FFF;
     padding: var(--padding);
     border-radius: 8px;
@@ -125,7 +120,7 @@ nav a {
 @media (max-width: 768px) {
     .reviews__cards {
         flex-wrap: nowrap;
-        flex-direction: column;
+        flex-direction: column; /* Смена ориентации на колонку для мобильных устройств */
         gap: 20px;
     }
 
@@ -137,7 +132,7 @@ nav a {
     .reviews__cards-item {
         flex: 0 1 auto;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -147,9 +142,3 @@ nav a {
     }
 
 }
-=======
-nav a:hover {
-    text-decoration: underline;
-    background-color: aqua;
-}
->>>>>>> dffe1e7 (added modal window and header)
