@@ -5,7 +5,7 @@
 body {
     background-color: #F7F6F5;
     font-family: 'Gilroy', sans-serif;
-    font-weight: 500; /* Medium */
+    font-weight: 500;
     color: #3A3845;
 }
 
@@ -34,9 +34,9 @@ body {
 
 .header__logo {
     display: inline-block;
-    width: 183px; /* исходная ширина */
-    height: 48px; /* исходная высота */
-    max-width: 100%; /* подстраивается под контейнер */
+    width: 183px;
+    height: 48px;
+    max-width: 100%;
     min-width: 100px;
 }
 
@@ -72,8 +72,8 @@ body {
 .header__search-wrapper {
     position: relative;
     width: 320px;
-    flex: 1 1 auto; /* может сжиматься и расширяться */
-    min-width: 42px; /* минимальная ширина, чтобы не исчезал */
+    flex: 1 1 auto;
+    min-width: 42px;
 }
 
 
@@ -185,14 +185,14 @@ body {
         opacity: 0;
         flex-direction: column;
         gap: 10px;
-        position: absolute; /* важно */
-        top: 100%; /* под хедером */
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
         background: #fff;
         padding: 10px 0;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        z-index: 10; /* важно, чтобы было поверх других блоков */
+        z-index: 10;
         transition: opacity 0.3s ease, transform 0.3s ease;
 
         transform: translateY(-10px);
@@ -200,8 +200,7 @@ body {
 
     }
 
-
-    /* Активное состояние */
+    
     .header__links.active {
         opacity: 1;
         transform: translateY(0);
@@ -209,7 +208,7 @@ body {
     }
 
     .header__burger {
-        display: flex; /* показываем бургер на мобилке */
+        display: flex;
     }
 
 }
