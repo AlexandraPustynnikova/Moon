@@ -1,0 +1,69 @@
+@import url("../../reset.css");
+@import "../../fonts/fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+body {
+  background-color: #20264C;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  background-color: #070E38;
+  background-color: white;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 99px 70px 112px;
+}
+.sidebar__logo {
+  align-self: start;
+  width: 186px;
+  height: 35px;
+}
+.sidebar__features {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__features-title {
+  font-family: Manrope;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.sidebar__features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form {
+  background-color: #FCFCFC;
+  flex: 0 0 833px;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__title {
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  .sidebar {
+    display: none;
+  }
+  .form {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/form.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>form</title>
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar">
+				<div class="sidebar__logo"><img src="./icons/logomoon%202.svg" alt="logo"/></div>
+				<div class="sidebar__features">
+					<h2 class="sidebar__features-title">Возможности онлайн приложения</h2>
+					<ul class="sidebar__features-list">
+						<li class="sidebar__feature-item">Клиенты записываются 24/7 в удобное для вас время</li>
+						<li class="sidebar__feature-item">Создавайте, редактируйте, просматривайте записи</li>
+						<li class="sidebar__feature-item">Масштаб журнала записи 5, 10, 15 и 30 минут.</li>
+						<li class="sidebar__feature-item">Мотивируйте клиентов приходить чаще и тратить больше</li>
+					</ul>
+				</div>
+			</aside>
+			
+			<form class="form" action="">
+				<div class="form__logo"><img src="./icons/logomoon%202%202.svg" alt="logo"/></div>
+				<h1 class="form__title">Регистрация</h1>
+				
+				<div class="form__fields">
+					<div class="form__field">
+						<label for="name" class="form__label">Имя</label>
+						<input class="form__input" type="name" id="name" name="name" placeholder="Введите имя"/>
+					</div>
+					
+					<div class="form__field">
+						<label for="surname" class="form__label">Фамилия</label>
+						<input class="form__input" type="text" id="surname" name="surname" placeholder="Введите фамилию"/>
+					</div>
+					
+					<div class="form__field">
+						<label for="tel" class="form__label">Номер телефона</label>
+						<input class="form__input" type="tel" id="tel" name="tel" placeholder="+992 000 000 00-00"/>
+					</div>
+					
+					<div class="form__field">
+						<label for="email" class="form__label">Электронная почта</label>
+						<input class="form__input" type="email" id="email" name="email" placeholder="Введите электронную почту"/>
+					</div>
+					
+					<div class="form__field">
+						<label for="password" class="form__label">Пароль</label>
+						<input class="form__input" type="password" id="password" name="password" placeholder="Введите пароль"/>
+					</div>
+					
+					<div class="form__field">
+						<label for="password-confirm" class="form__label">Подтвердить пароль</label>
+						<input class="form__input" type="password" id="password-confirm" name="password-confirm"
+									 placeholder="Введите пароль"/>
+					</div>
+				</div>
+				
+				
+				<button type="submit" class="form__input form__input_colored">Зарегистрироваться</button>
+				<div class="form__check-block">
+					<input class="form__checkbox" type="checkbox"/>
+					<p class="form__check-text">
+						Нажимая «Зарегистрироваться», вы соглашаетесь на обработку персональных данных и условия сервиса
+					</p>
+				</div>
+				
+				
+				<button class="form__input form__input-auth">
+					<p class="form__auth-text">Нет аккаунта?</p>
+					<a href="#" class="form__auth-link">Зарегистрироваться</a>
+				</button>
+			</form>
+		
+		</div>
+	</body>
+</html>
