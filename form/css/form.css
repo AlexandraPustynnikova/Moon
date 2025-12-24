@@ -61,7 +61,7 @@ body {
 }
 
 .form {
-  padding: 30px 0;
+  padding: 20px 0 0 0;
   background-color: #FCFCFC;
   flex: 0 0 833px;
   min-width: 360px;
@@ -96,6 +96,18 @@ body {
   align-items: flex-start;
   position: relative;
 }
+.form__field--password {
+  position: relative;
+}
+.form .form__password-eye {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+  width: 20px;
+  height: 20px;
+  background: url("./../icons/EyeSlash.svg") no-repeat center/contain;
+  pointer-events: none;
+}
 .form__input {
   border-radius: 68px;
   width: 408px;
@@ -121,17 +133,44 @@ body {
 }
 .form__check-block {
   width: 408px;
+  /*margin-bottom: 67px;*/
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: row;
   align-items: start;
   gap: 10px;
-  margin-bottom: 67px;
+}
+.form__checkbox-label {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
 }
 .form__checkbox {
+  display: none;
+}
+.form__checkbox-custom {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #FF941A;
+  border-radius: 4px;
+  border: 1px solid #E8E8E8;
+  background: #fff;
+  position: relative;
+  flex-shrink: 0;
+}
+.form__checkbox:checked + .form__checkbox-custom {
+  background: #FF941A;
+  border-color: #FF941A;
+}
+.form__checkbox:checked + .form__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 .form__check-text {
   font-size: 12px;
