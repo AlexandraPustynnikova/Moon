@@ -1,0 +1,26 @@
+@import url("../../reset.css");
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 345px 1fr;
+  grid-template-rows: 120px 1fr;
+}
+
+.header {
+  background-color: rebeccapurple;
+}
+
+.sidebar {
+  grid-row: 1/-1;
+  background: #2c2c2c;
+}
+.content {
+  background-color: hotpink;
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=layout.css.map */
