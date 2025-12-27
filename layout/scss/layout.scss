@@ -1,4 +1,6 @@
 @import url('../../reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 html, body {
   height: 100%;
@@ -9,10 +11,78 @@ body {
   display: grid;
   grid-template-columns: 345px 1fr;
   grid-template-rows: 120px 1fr;
+  font-family: Poppins;
 }
 
 .header {
-  background-color: rebeccapurple;
+  padding: 35px 44px 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &__search-wrapper {
+    position: relative;
+  }
+
+  &__search {
+    width: 513px;
+    height: 60px;
+    border: none;
+    background-color: #F9FAFB;
+    border-radius: 16px;
+  }
+
+  &__search::placeholder {
+    padding-left: 64px;
+    color: #737791;
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    width: 32px;
+    height: 32px;
+    background-image: url('./../icons/magnifier (1).svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__lang-text {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__lang-selected {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .sidebar {
@@ -29,7 +99,6 @@ body {
 }
 
 .content {
-  background-color: hotpink;
-  //#FAFBFC;
+  background-color: #FAFBFC;
   overflow-y: auto;
 }
