@@ -28,7 +28,7 @@
 				<div class="form__fields">
 					<div class="form__field">
 						<label for="name" class="form__label">Имя</label>
-						<input class="form__input" type="name" id="name" name="name" placeholder="Введите имя"/>
+						<input class="form__input" type="text" id="name" name="name" placeholder="Введите имя"/>
 					</div>
 					
 					<div class="form__field">
@@ -38,12 +38,23 @@
 					
 					<div class="form__field">
 						<label for="tel" class="form__label">Номер телефона</label>
-						<input class="form__input" type="tel" id="tel" name="tel" placeholder="+992 000 000 00-00"/>
+						<input class="form__input" type="tel" id="tel" name="tel" placeholder="+992 000 000 00-00"
+									 autocomplete="tel"
+									 inputmode="tel"
+									 required
+									 pattern="\+992[\d\s-]+"
+						/>
 					</div>
 					
 					<div class="form__field">
 						<label for="email" class="form__label">Электронная почта</label>
-						<input class="form__input" type="email" id="email" name="email" placeholder="Введите электронную почту"/>
+						<input
+							class="form__input"
+							type="email" id="email"
+							name="email"
+							placeholder="Введите электронную почту"
+						
+						/>
 					</div>
 					
 					<div class="form__field form__field--password">
@@ -61,7 +72,7 @@
 				</div>
 				
 				
-				<button type="submit" class="form__input form__input_colored">Зарегистрироваться</button>
+				<button type="submit" class="form__button form__button_colored">Зарегистрироваться</button>
 				<div class="form__check-block">
 					<label class="form__checkbox-label">
 						<input class="form__checkbox" type="checkbox"/>
@@ -73,9 +84,9 @@
 				</div>
 				
 				
-				<button class="form__input form__input-auth">
-					<p class="form__auth-text">Нет аккаунта?</p>
-					<a href="#" class="form__auth-link">Зарегистрироваться</a>
+				<button type="button" class="form__button form__button-auth">
+					<span class="form__auth-text">Нет аккаунта?</span>
+					<span class="form__auth-link">Зарегистрироваться</span>
 				</button>
 			</form>
 		

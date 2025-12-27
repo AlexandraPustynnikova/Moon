@@ -88,7 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .form__field {
   display: flex;
@@ -121,20 +121,32 @@ body {
 .form__label {
   font-size: 14px;
 }
-.form__input_colored {
-  background-color: #FF941A;
+.form__button {
+  border-radius: 68px;
+  width: 408px;
   height: 53px;
-  color: white;
-  font-weight: 600;
-  margin-bottom: 8px;
+  border: none;
+  padding: 14.5px 48px 14.5px 24px;
   display: flex;
   align-items: center;
+}
+.form__button_colored {
+  background-color: #FF941A;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 15px;
   justify-content: center;
+}
+.form__button-auth {
+  justify-content: space-between;
+  font-size: 14px;
+  height: 51px;
+  background-color: #F7F7F8;
 }
 .form__check-block {
   width: 408px;
   /*margin-bottom: 67px;*/
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: start;
   gap: 10px;
@@ -174,15 +186,6 @@ body {
 }
 .form__check-text {
   font-size: 12px;
-}
-.form__input-auth {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  height: 51px;
-  background-color: #F7F7F8;
-  border: none;
 }
 .form__auth-text {
   color: #20264C;
